@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from 'react'
+import Content from './components/Content'
+import Hero from './components/Hero'
+import Details from './components/Details'
+import Footer from './components/Footer'
+import ScrollToTop from './components/ScrollToTop'
+function App () {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='bg-[#feecec] dark:bg-slate-900 dark:text-slate-50/90 text-slate-900'>
+      <Hero />
+      <Content />
+      <Details />
+      <Footer />
+      <ScrollToTop />
     </div>
-  );
+  )
 }
-
-export default App;
+export default App

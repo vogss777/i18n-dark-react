@@ -1,13 +1,84 @@
-body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.textb {
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  border: 0.1px solid rgb(248, 111, 111, 0.5);
+  background-image: linear-gradient(
+    to right,
+    #fab2b2,
+    #fccfcf,
+    #f77979,
+    #f7acbc,
+    #fab2b2
+  );
+  background-size: 370%;
+  animation: sun 7s infinite;
+}
+.textb:hover {
+  animation: sun 10s infinite;
+}
+@keyframes sun {
+  100% {
+    background-position: -370% 0;
+  }
+}
+.textMob {
+  margin: 100px auto;
+  text-align: center;
+  font-weight: 900;
+  padding: 20px;
+  background-image: linear-gradient(
+    to right,
+    #d71345,
+    #f7acbc,
+    #3498db,
+    #f47920,
+    #d71345
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: move 3s infinite linear;
+}
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+img {
+  @apply w-60 mx-3;
+}
+.iconbox img {
+  @apply w-10;
+}
+/*定义滚动条高宽及背景
+高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar {
+  width: 20px;
+  height: 20px;
+  background-color: rgb(15 23 42);
+}
+/*定义滚动条轨道
+  内阴影+圆角*/
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgb(15 23 42);
+  border-radius: 10px;
+  background-color: #cec9c9;
+}
+/*定义滑块
+  内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgb(15 23 42);
+  background-color: rgb(15 23 42 0.1);
 }
